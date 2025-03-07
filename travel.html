@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog</title>
+  <link rel="stylesheet" href="travel.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <img src="logo.png" alt="Travel Blog Logo">
+    <div class="menu">
+      <a href="#home" onclick="showSection('home')">Home</a>
+      <a href="#destinations" onclick="showSection('destinations')">Destinations</a>
+      <a href="#about" onclick="showSection('about')">About</a>
+      <a href="#contact" onclick="showSection('contact')">Contact</a>
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content">
+    <div class="navbar">
+      <a href="#latest-posts" onclick="showSection('latest-posts')">Latest Posts</a>
+      <a href="#travel-tips" onclick="showSection('travel-tips')">Travel Tips</a>
+      <a href="#gallery" onclick="showSection('gallery')">Gallery</a>
+      <a href="#reviews" onclick="showSection('reviews')">Reviews</a>
+    </div>
+
+    <!-- Sections -->
+    <div id="home" class="section">
+      <h1>Welcome to My Travel Blog</h1>
+      <p>Explore the world with me as I share my adventures, tips, and experiences from around the globe.</p>
+      <h2>Featured Destination: Bali</h2>
+      <p>Bali is a tropical paradise known for its stunning beaches, vibrant culture, and lush landscapes. Whether
+        you're surfing in Kuta or exploring the temples in Ubud, Bali has something for everyone.</p>
+    </div>
+
+    <div id="destinations" class="section">
+      <h2>Destinations</h2>
+      <p>Discover amazing travel destinations around the world. From the beaches of Bali to the mountains of
+        Switzerland, there's something for every traveler.</p>
+    </div>
+
+    <div id="about" class="section">
+      <h2>About Me</h2>
+      <p>Hi! I'm a passionate traveler who loves exploring new cultures, cuisines, and landscapes. Join me on my journey
+        as I share my travel experiences and tips.</p>
+    </div>
+
+    <div id="contact" class="section">
+      <h2>Contact Me</h2>
+      <p>Have questions or want to collaborate? Reach out to me at <a href="mailto:info@travelblog.com"
+          style="color: #18bc9c;">info@travelblog.com</a>.</p>
+    </div>
+
+    <div id="latest-posts" class="section">
+      <h2>Latest Posts</h2>
+      <p>Check out my most recent travel adventures and stories.</p>
+    </div>
+
+    <div id="travel-tips" class="section">
+      <h2>Travel Tips</h2>
+      <p>Learn how to travel smarter with my tips on packing, budgeting, and more.</p>
+    </div>
+
+    <div id="gallery" class="section">
+      <h2>Gallery</h2>
+      <p>Explore stunning photos from my travels around the world.</p>
+    </div>
+
+    <div id="reviews" class="section">
+      <h2>Reviews</h2>
+      <p>Read my reviews of hotels, restaurants, and attractions.</p>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>Location: 123 Travel Street, Wanderlust City, World | Email: info@travelblog.com</p>
+  </div>
+
+  <script>
+    // Function to show the selected section and hide others
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionId);
+      if (selectedSection) {
+        selectedSection.style.display = 'block';
+      }
+    }
+
+    // Show the home section by default
+    showSection('home');
+  </script>
+</body>
+
+</html>
